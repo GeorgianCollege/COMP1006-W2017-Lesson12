@@ -1,0 +1,15 @@
+{
+    "name": "tom/comp1006-w2017-lesson12",
+    "description": "Sending Mail with SendGrid",
+    "type": "project",
+    "require": {
+        "sendgrid/sendgrid": "^5.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom Tsiliopoulos",
+            "email": "tsiliopoulos@hotmail.com"
+        }
+    ]
+}
