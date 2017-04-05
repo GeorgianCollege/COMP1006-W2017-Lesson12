@@ -21,6 +21,8 @@ function ProcessEmail($fullName, $emailAddress, $contactNumber, $message) {
 
     // send the mail
     $response = $sg->client->mail()->send()->post($mail);
+
+    return true;
 }
 
 

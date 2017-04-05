@@ -7,11 +7,21 @@
 
         include_once("Controllers/email.php");
 
-        ProcessEmail($fullName, $emailAddress, $contactNumber, $message);
+        if(ProcessEmail($fullName, $emailAddress, $contactNumber, $message)) {
+            $messages = "Message has been sent";
+        }
+        else {
+            $messages = "Problem sending message";
+        }
     }
 
 ?>
+
+
 <div class="container">
+    <?php if ($messages != "") : ?>
+        <div class="alert alert-warning"><?php echo $messages ?></div>
+    <?php endif ?>
     <div class="row">
         <div class="col-md-offset-3 col-md-6">
             <h1>Contact Us</h1>
