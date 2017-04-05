@@ -3,6 +3,7 @@
 if(!isset($_GET["pageId"])) {
     $title = "Home";
     $templateString = 'Views/dashboard.php';
+    echo $_ENV["SENDGRID_API"];
 }
 else {
     switch($_GET["pageId"]) {
