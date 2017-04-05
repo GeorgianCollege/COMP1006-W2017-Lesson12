@@ -11,15 +11,15 @@ function DBConnection() {
     try {
 
         // cleardb access
-        $dsn = 'mysql:host=ca-cdbr-azure-central-a.cloudapp.net;dbname=videogamesdb';
-        $Username = 'b6ee96bd470785';
-        $Password = 'dc381279';
+        //$dsn = 'mysql:host=ca-cdbr-azure-central-a.cloudapp.net;dbname=videogamesdb';
+        //$Username = 'b6ee96bd470785';
+        //$Password = 'dc381279';
 
 
         //local db access
-        //$dsn = 'mysql:host=localhost;dbname=gamedb';
-        //$Username = 'dasha';
-        //$Password = '12345';
+        $dsn = 'mysql:host=localhost;dbname=gamedb';
+        $Username = 'dasha';
+        $Password = '12345';
         // instantiates a new pdo - an db object
         return new PDO($dsn, $Username, $Password);
     }
