@@ -1,4 +1,6 @@
 <?php
+    $messages = "";
+
     if(isset($_POST["fullname"])) {
         $fullName = $_POST["fullname"];
         $emailAddress = $_POST["email"];
