@@ -9,20 +9,22 @@ function ProcessEmail($fullName, $emailAddress, $contactNumber, $message) {
 
     $from = new SendGrid\Email(null, $emailAddress);
     $subject = "Email from Contact Form";
-    $to = new SendGrid\Email(null, "tsiliopoulos@hotmail.com");
+    $to = new SendGrid\Email(null, "tom.tsiliopoulos@gmail.com");
 
-    $message .= "/n/nFull Name:" . $fullName . "/nContact Number: " . $contactNumber;
+    $message .= "\n \nFull Name:" . $fullName . "\nContact Number: " . $contactNumber;
 
     $content = new SendGrid\Content("text/plain", $message);
     $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-    $apiKey = getenv("SENDGRID_API");
-    $sg = new \SendGrid($apiKey);
+    //$apiKey = $_ENV["SENDGRID_API"];
+    $sg = new \SendGrid("YOUR_API_KEY");
+    //$sg = new \SendGrid($apiKey);
 
     // send the mail
     $response = $sg->client->mail()->send()->post($mail);
 
-    return true;
+
+    return $response->statusCode();
 }
 
 

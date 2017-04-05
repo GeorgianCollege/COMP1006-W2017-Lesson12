@@ -9,7 +9,7 @@
 
         include_once("Controllers/email.php");
 
-        if(ProcessEmail($fullName, $emailAddress, $contactNumber, $message)) {
+        if(ProcessEmail($fullName, $emailAddress, $contactNumber, $message) == 202) {
             $messages = "Message has been sent";
         }
         else {
