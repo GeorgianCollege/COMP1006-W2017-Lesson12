@@ -18,9 +18,12 @@
                 </div>
                 <div class="form-group">
                     <label for="MessageTextArea">Message:</label>
-                    <textarea class="form-control" rows="5" id="MessageTextArea" name="contactnumber" placeholder="Enter Your Contact Number" required></textarea>
+                    <textarea class="form-control" rows="5" id="MessageTextArea" name="contactnumber" placeholder="Enter Your Message" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="index.php?pageId=Contact">
+                    <input type="button" class="btn btn-warning" value="Cancel"/>
+                </a>
             </form>
 
 
